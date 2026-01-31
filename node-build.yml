@@ -1,0 +1,12 @@
+parameters:
+  nodeVersion: '18.x'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: ${{ parameters.nodeVersion }}
+
+- script: |
+    npm install
+    npm run build
+  displayName: Build Node.js app
