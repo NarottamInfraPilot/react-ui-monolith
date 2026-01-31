@@ -5,8 +5,9 @@
 #     name: Narottam-project
 #     ref: refs/heads/main
 
-trigger:
-- main
+trigger: none
+
+pool: Hosted
  
 stages:
 - stage: Build
