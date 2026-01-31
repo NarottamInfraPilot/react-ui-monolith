@@ -1,13 +1,16 @@
-trigger: none
+# resources:
+#   repositories:
+#   - repository: react-ui-monolith
+#     type: git
+#     name: Narottam-project
+#     ref: refs/heads/main
 
-pool:
-  vmImage: 'ubuntu-latest'
-
+trigger:
+- main
+ 
 stages:
 - stage: Build
   jobs:
   - job: BuildJob
     steps:
-    - template: templates/node-build.yml
-      parameters:
-        nodeVersion: '18.x'
+    - template: node-build.yml
